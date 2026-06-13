@@ -1,40 +1,78 @@
-<style>
-  .mode-landscape .sl-foundation-layout { display: flex; flex-direction: row; align-items: stretch; min-height: 100%; }
-  .mode-landscape .sl-content-panel { width: 55%; padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
-  .mode-landscape .sl-visual-panel { width: 45%; min-height: 0; }
-  .mode-portrait .sl-foundation-layout { display: flex; flex-direction: column; min-height: 100%; }
-  .mode-portrait .sl-content-panel { padding: 2rem 1.5rem; }
-  .mode-portrait .sl-visual-panel { min-height: 280px; }
-</style>
 <section class="w-full h-full overflow-auto bg-white">
-  <div class="sl-foundation-layout">
-    <div class="sl-content-panel">
-      <div class="flex items-center justify-between mb-4">
-        <span class="inline-block text-xs font-semibold tracking-widest uppercase" style="color:#2563eb;">Foundation</span>
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 border rounded-full" style="background-color:#2563eb; border-color:#2563eb30;">
-          <span class="text-xs font-semibold" style="color:#ffffff;">Validated</span>
+  <div class="w-full h-full flex flex-col p-10 gap-5">
 
-        </span>
+    <!-- Slide header -->
+    <div>
+      <div class="flex items-center gap-3 mb-1">
+        <div style="width:16px;height:2px;" class="bg-amber-400"></div>
+        <span class="text-xs font-semibold tracking-widest uppercase text-slate-400">Foundation</span>
       </div>
-      <h1 class="text-3xl font-bold text-slate-900 leading-tight mb-8">Fragmented property management and client tracking</h1>
-      <div class="space-y-5">
-        <div class="border-l-4 pl-4 relative" style="border-color:#F43F5E;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#E11D48;">The Problem</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Real estate agents spend too much time managing spreadsheets, coordinating viewings across multiple channels, and manually matching buyers to properties. Critical deals are delayed or lost due to poor organization and slow response times.</p>
-        </div>
-        <div class="border-l-4 pl-4 relative" style="border-color:#2563eb;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#2563eb;">The Solution</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Real estate agents juggle multiple spreadsheets, emails, and phone calls to manage listings, coordinate viewings, and track offers. Without a centralized system, properties sit longer on the market, buyer-agent matches are inefficient, and deals slip through the cracks due to poor communication and lost follow-ups.</p>
-        </div>
-        <div class="border-l-4 border-sky-500 pl-4 relative"><h2 class="text-sm font-semibold text-sky-600 uppercase tracking-wide mb-1">Target Audience</h2><p class="text-slate-700 leading-relaxed text-sm">Individual agents and small to mid-sized brokerages managing 10-100+ active listings</p></div>
-        <div class="border-l-4 border-amber-500 pl-4 relative"><h2 class="text-sm font-semibold text-amber-600 uppercase tracking-wide mb-1">Personal Motivation</h2><p class="text-slate-700 leading-relaxed text-sm">Help agents reclaim time from administrative tasks and focus on relationship-building and closing deals, while reducing the time properties spend on the market.</p></div>
-      </div>
-      <div class="mt-6 flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">real estate</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">property management</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">CRM</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">deal acceleration</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">buyer matching</span></div>
-      <div class="mt-8"><data-attribution /></div>
+      <h2 class="text-2xl font-bold text-slate-900">The Problem &amp; The Solution</h2>
     </div>
-    <div class="sl-visual-panel relative">
-      <img src="http://localhost:8001/common/image-generation?prompt=stressed+real+estate+agent+surrounded+by+paperwork+scattered+files+disorganized+office&amp;keyspace=eq71rmo6&amp;user_id=4706" alt="visual" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent opacity-40"></div>
+
+    <!-- Two panels -->
+    <div class="flex-1 flex flex-row gap-5">
+
+      <!-- Problem panel (dark) -->
+      <div class="flex-1 bg-slate-900 rounded-2xl p-8 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-2 mb-5">
+            <div style="width:8px;height:8px;" class="rounded-full bg-amber-400"></div>
+            <span class="text-xs font-semibold tracking-widest uppercase text-amber-400">The Problem</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-5 leading-snug">
+            Deals Are Lost in the Chaos
+          </h3>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="flex-none mt-1.5" style="width:6px;height:6px;border-radius:9999px;background:#f59e0b;"></div>
+              <p class="text-sm text-slate-300 leading-relaxed">Listings, buyer preferences, and viewings are scattered across emails, spreadsheets, and memory — nothing is in one place</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-none mt-1.5" style="width:6px;height:6px;border-radius:9999px;background:#f59e0b;"></div>
+              <p class="text-sm text-slate-300 leading-relaxed">Matching the right buyer to the right property happens too slowly — opportunities go to faster competitors while agents are still cross-referencing</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-none mt-1.5" style="width:6px;height:6px;border-radius:9999px;background:#f59e0b;"></div>
+              <p class="text-sm text-slate-300 leading-relaxed">Offer tracking is manual and fragmented — negotiation momentum stalls, follow-ups are missed, and deals fall through the cracks</p>
+            </div>
+          </div>
+        </div>
+        <div class="pt-5 mt-4" style="border-top:1px solid #334155;">
+          <p class="text-xs text-slate-500">Every slow match and missed follow-up is revenue walking out the door</p>
+        </div>
+      </div>
+
+      <!-- Solution panel (light) -->
+      <div class="flex-1 bg-indigo-50 rounded-2xl p-8 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-2 mb-5">
+            <div style="width:8px;height:8px;" class="rounded-full bg-indigo-600"></div>
+            <span class="text-xs font-semibold tracking-widest uppercase text-indigo-600">The Solution</span>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-5 leading-snug">
+            One Hub. Every Deal.
+          </h3>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="flex-none mt-1.5" style="width:6px;height:6px;border-radius:9999px;background:#4f46e5;"></div>
+              <p class="text-sm text-slate-700 leading-relaxed">Centralise all property listings with live status, pricing, and full details — everything on the agent's books in one register</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-none mt-1.5" style="width:6px;height:6px;border-radius:9999px;background:#4f46e5;"></div>
+              <p class="text-sm text-slate-700 leading-relaxed">Store buyer profiles with preferences and budget, then instantly surface matching properties without manual cross-referencing</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="flex-none mt-1.5" style="width:6px;height:6px;border-radius:9999px;background:#4f46e5;"></div>
+              <p class="text-sm text-slate-700 leading-relaxed">Log viewings and track every offer stage — see the full pipeline at a glance and act before deal momentum stalls</p>
+            </div>
+          </div>
+        </div>
+        <div class="pt-5 mt-4" style="border-top:1px solid #c7d2fe;">
+          <p class="text-xs font-medium text-indigo-600">Built for agents who close, not agents who chase paperwork</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
