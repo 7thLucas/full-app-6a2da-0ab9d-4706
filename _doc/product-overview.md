@@ -1,0 +1,1 @@
+Build me an app for real estate agents to help them manage property listings, client viewings, and offer tracking with the goal to close deals faster by matching buyers to the right properties
