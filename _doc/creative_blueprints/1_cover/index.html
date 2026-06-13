@@ -1,39 +1,69 @@
 <style>
-  .mode-landscape .sl-cover-layout { display: flex; flex-direction: row; align-items: stretch; min-height: 100%; }
-  .mode-landscape .sl-content-panel { width: 55%; display: flex; flex-direction: column; justify-content: center; }
-  .mode-landscape .sl-image-panel { width: 45%; min-height: 0; }
-  .mode-portrait .sl-cover-layout { display: flex; flex-direction: column; min-height: 100%; }
-  .mode-portrait .sl-content-panel { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-bottom: 1.5rem; }
-  .mode-portrait .sl-image-panel { min-height: 280px; flex-shrink: 0; }
+.mode-landscape .sl-layout { flex-direction: row; }
+.mode-portrait  .sl-layout { flex-direction: column; }
+.mode-portrait  .sl-hero   { min-height: 260px; flex-shrink: 0; }
 </style>
-<section class="w-full h-full overflow-auto bg-white">
-  <div class="sl-cover-layout h-full">
-    <div class="sl-content-panel px-10 py-12">
-      <div class="flex flex-col justify-between h-full">
-        <div>
-          <p class="text-sm font-medium tracking-widest uppercase mb-6" style="color:#2563eb;">Real Estate Agent</p>
-          <h1 class="text-5xl font-bold text-slate-900 leading-tight mb-6">Close Deals Faster</h1>
-          <p class="text-xl text-slate-600 leading-relaxed max-w-md mb-6">Centralized property management, intelligent buyer matching, and streamlined offer tracking for modern real estate agents.</p>
-          <div class="inline-flex items-center gap-3 border rounded-lg px-4 py-3" style="background-color:#10b981; border-color:#2563eb40;">
-            <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:#2563eb;">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-            <span class="text-sm font-medium px-1" style="color:#ffffff;">Core vision: Simplified productivity</span>
 
-          </div>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout w-full h-full flex">
+
+    <!-- Left: content column -->
+    <div class="flex flex-col justify-between p-12 pr-8" style="flex:0 0 56%;">
+      <div>
+        <!-- Eyebrow -->
+        <div class="flex items-center gap-3 mb-8">
+          <div style="width:28px;height:2px;" class="bg-amber-400"></div>
+          <span class="text-xs font-semibold tracking-widest uppercase text-slate-400">Real Estate · Deal Intelligence</span>
         </div>
-        <div class="mt-auto pt-8">
-          <data-attribution />
+
+        <!-- Headline -->
+        <h1 class="font-bold text-slate-900 leading-tight mb-6" style="font-size:2.75rem;">
+          Close Deals<br>Faster. Match<br>Every Buyer.
+        </h1>
+
+        <!-- Tagline -->
+        <p class="text-base text-slate-600 leading-relaxed" style="max-width:330px;">
+          The operational hub for real estate agents — listings, viewings, offers, and buyer matching in one workspace so nothing slips and every deal moves forward.
+        </p>
+      </div>
+
+      <!-- Stat strip -->
+      <div class="flex items-center gap-6 mb-8">
+        <div>
+          <div class="text-2xl font-bold text-slate-900">5-in-1</div>
+          <div class="text-xs text-slate-500 mt-0.5">workflow in one place</div>
+        </div>
+        <div style="width:1px;height:36px;" class="bg-slate-200"></div>
+        <div>
+          <div class="text-2xl font-bold text-slate-900">Faster</div>
+          <div class="text-xs text-slate-500 mt-0.5">buyer-to-offer cycle</div>
+        </div>
+        <div style="width:1px;height:36px;" class="bg-slate-200"></div>
+        <div>
+          <div class="text-2xl font-bold text-slate-900">Zero</div>
+          <div class="text-xs text-slate-500 mt-0.5">missed follow-ups</div>
         </div>
       </div>
-    </div>
-    <div class="sl-image-panel relative overflow-hidden">
-      <div class="absolute inset-0" style="background:linear-gradient(135deg, #2563eb, #2563eb20);"></div>
-      <div class="absolute inset-0 flex items-center justify-center p-8">
-        <img src="http://localhost:8001/common/image-generation?prompt=modern+real+estate+agent+working+with+laptop+and+property+listings+professional+office&amp;keyspace=eq71rmo6&amp;user_id=4706" alt="cover" class="max-w-full max-h-full object-contain drop-shadow-2xl rounded-2xl" />
+
+      <!-- Attribution -->
+      <div class="flex items-center gap-3">
+        <div style="width:32px;height:2px;" class="bg-amber-400"></div>
+        <data-attribution />
       </div>
     </div>
+
+    <!-- Right: hero image -->
+    <div class="sl-hero flex-1 relative overflow-hidden">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=luxury%20modern%20real%20estate%20home%20exterior%20golden%20hour%20warm%20light%20architectural%20photography%20professional%20wide%20angle%20clean"
+        alt="Modern luxury property"
+        class="w-full h-full object-cover"
+      />
+      <!-- Fade to white on left edge -->
+      <div class="absolute inset-y-0 left-0" style="width:80px;background:linear-gradient(to right,#ffffff,transparent);"></div>
+      <!-- Amber accent bar along top -->
+      <div class="absolute top-0 right-0" style="width:4px;height:100%;background:linear-gradient(to bottom,#f59e0b,transparent);"></div>
+    </div>
+
   </div>
 </section>
